@@ -46,6 +46,7 @@ public class AndroidDemoTest {
             driver.findElement(BUTTON_7).click();
             driver.findElement(BUTTON_EQUALS).click();
             assertThat(driver.findElement(RESULT_FIELD).getText(), equalTo("9"));
+            System.out.println("driver.findElement(RESULT_FIELD).getText()");
         } finally {
      //       takeScreenshot(driver);
         }
