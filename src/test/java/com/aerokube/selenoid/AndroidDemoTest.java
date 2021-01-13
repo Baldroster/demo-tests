@@ -27,15 +27,15 @@ public class AndroidDemoTest {
     public void openDriver() throws Exception {
         final DesiredCapabilities device = new DesiredCapabilities();
         device.setCapability("deviceName", "android");
-        device.setCapability("version", "6.0");
+        device.setCapability("version", "9.0");
 //        device.setCapability("app", "http://download.example.com/test.apk"); // Uncomment this to download your own APK
         device.setCapability("appPackage", "com.android.calculator2"); // Set this to your APK package
         device.setCapability("appActivity", "com.android.calculator2.Calculator");  // Set this to your APK main activity
-        device.setCapability("enableVNC", true); // Uncomment this to record 
+//       device.setCapability("enableVNC", true); // Uncomment this to record 
 //        device.setCapability("enableVideo", true); // Uncomment this to record video
 
         driver = new RemoteWebDriver(new URL(
-                "http://selenoid.example.com:4444/wd/hub" //Replace with correct host and port
+                "http://localhost:4444/wd/hub" //Replace with correct host and port
         ), device);
     }
 
